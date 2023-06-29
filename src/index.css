@@ -1,0 +1,28 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  justify-content: center;
+}
+
+input {
+    outline: none;
+    border: 1px solid rgb(156, 227, 237);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 4px;
+    background: #bcedf8;
+}

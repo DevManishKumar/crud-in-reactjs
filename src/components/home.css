@@ -1,0 +1,99 @@
+.content {
+  margin-top: 60px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.searchBar input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.add-contact-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+a {
+  color: #fdfdfd;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: tableFadeIn 0.5s ease-in-out;
+}
+
+.styled-table thead th {
+  padding: 15px;
+  color: #fff;
+  background-color: #007bff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.styled-table tbody td {
+  padding: 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.styled-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.action-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+.edit-btn {
+  margin-right: 1px;
+  background-color: #28a745;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+@keyframes tableFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
