@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #b45b08;
+  background-color: #1fce99;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,12 +9,13 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s;
+  box-shadow: 0px 0px 20px 0px #036d56;
 }
 
 .logo a {
-  color: #fdfdfd;
-  font-size: 20px;
+  color: #6bf8ce;
+  font-size: 28px;
+  text-shadow: 1px 1px 10px rgb(8, 8, 8);
   font-weight: 700;
   text-decoration: none;
 }
@@ -25,9 +26,13 @@
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: #04faee;
+  text-shadow: 1px 1px 10px rgb(255, 253, 253);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 1em !important;
   /* margin-left: 10px; */
   padding: 10px;
   border-radius: 4px;
@@ -57,4 +62,3 @@
 .nav-links a:hover {
   transform: translateY(-3px);
 }
-

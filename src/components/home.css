@@ -11,15 +11,17 @@
 
 .searchBar input[type="text"] {
   padding: 8px;
-  border: none;
+  border: 1px solid inherit;
   border-radius: 3px;
   margin-right: 5px;
   font-size: 14px;
 }
 
 .add-contact-btn {
-  background-color: #28a745;
+  background-color: #31ebf1;
   color: #fff;
+  text-shadow: 1px 1px 3px black;
+  font-weight: 600;
   border: none;
   padding: 8px 12px;
   border-radius: 3px;
@@ -38,15 +40,15 @@ a {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #b8f8e8;
+  box-shadow: 0px 2px 8px rgb(94, 93, 93);
   animation: tableFadeIn 0.5s ease-in-out;
 }
 
 .styled-table thead th {
   padding: 15px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #7abafd;
   font-size: 14px;
   text-align: center;
 }
@@ -54,7 +56,7 @@ a {
 .styled-table tbody td {
   padding: 15px;
   font-size: 14px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid white;
   text-align: center;
 }
 
@@ -62,29 +64,19 @@ a {
   border-bottom: none;
 }
 
-.action-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-right: 5px;
-  transition: background-color 0.3s;
-}
-
-.action-btn:hover {
-  background-color: #0056b3;
-}
-
 .edit-btn {
   margin-right: 1px;
-  background-color: #28a745;
+  background-color: #39f164;
+}
+.edit-btn:hover {
+  background-color: #19cf44;
 }
 
 .delete-btn {
-  background-color: #dc3545;
+  background-color: #f77f8b;
+}
+.delete-btn:hover {
+  background-color: #f85565;
 }
 
 @keyframes tableFadeIn {

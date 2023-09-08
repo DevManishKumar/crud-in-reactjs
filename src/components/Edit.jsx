@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateContact } from "../reducer/ContactReducer";
+import { updateUser } from "../reducer/UserReducer";
 import "./form.css";
 
 const Edit = () => {
   const { id } = useParams();
-  const contacts = useSelector((state) => state.contacts);
-  const existingContact = contacts.filter((f) => f.id == id);
-  const { name, phone } = existingContact[0];
+  const users = useSelector((state) => state.users);
+  const existingUser = users.filter((f) => f.id == id);
+  const { name, email } = existingUser[0];
   const [uname, setName] = useState(name);
-  const [uphone, setPhone] = useState(phone);
+  const [uemail, setEmail] = useState(email);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,10 +18,10 @@ const Edit = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     dispatch(
-      updateContact({
+      updateUser({
         id: id,
         name: uname,
-        phone: uphone,
+        email: uemail,
       })
     );
 
@@ -29,7 +29,7 @@ const Edit = () => {
   };
   return (
     <div className="container">
-      <h1>Edit Contact</h1>
+      <h1>Edit User</h1>
       <form onSubmit={handleUpdate}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -42,13 +42,13 @@ const Edit = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="email">Email</label>
           <input
             type="tel"
-            id="phone"
-            name="phone"
-            value={uphone}
-            onChange={(e) => setPhone(e.target.value)}
+            id="email"
+            name="email"
+            value={uemail}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <button type="submit">Update</button>

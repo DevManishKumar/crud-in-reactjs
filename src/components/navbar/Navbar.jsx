@@ -7,11 +7,11 @@ const Navbar = () => {
     <div>
       <nav className="navbar">
         <div className="logo">
-          <Link to={"/"}> ContactList </Link>
+          <Link to={"/"}> UserList </Link>
         </div>
       
         <div className="nav-links">
-          <Link to={"/create"}>Create New Contact</Link>
+          <Link to={"/create"}>Create New User</Link>
         </div>
       </nav>
     </div>

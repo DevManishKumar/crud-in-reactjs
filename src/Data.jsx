@@ -1,22 +1,22 @@
-export const contactList = [
+export const userList = [
   {
     id: 1,
     name: "Manish Kumar",
-    phone: 333333333,
+    email: "manish@test.com",
   },
   {
     id: 2,
     name: "Anil Kumar",
-    phone: 222222222,
+    email: "anil@test.com",
   },
   {
     id: 3,
     name: "Abhishek Kumar",
-    phone: 4444444444,
+    email: "abhi@test.com",
   },
   {
     id: 4,
     name: "Rahul Kumar",
-    phone: 1111111111,
+    email: "rahul@test.com",
   },
 ];

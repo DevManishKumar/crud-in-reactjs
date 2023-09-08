@@ -1,27 +1,27 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "../reducer/ContactReducer";
+import { addUser } from "../reducer/UserReducer";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
 
 const Create = () => {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
-  const contacts = useSelector((state) => state.contacts);
+  const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      addContact({ id: contacts[contacts.length - 1].id + 1, name, phone })
+      addUser({ id: users[users.length - 1].id + 1, name, email })
     );
     navigate("/");
   };
   return (
     <div className="container">
-      <h1>Add New Contact</h1>
+      <h1>Add New User</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -34,12 +34,12 @@ const Create = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="email">Email</label>
           <input
             type="tel"
-            id="phone"
-            name="phone"
-            onChange={(e) => setPhone(e.target.value)}
+            id="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
